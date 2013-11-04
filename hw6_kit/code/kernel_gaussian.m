@@ -18,8 +18,10 @@ K = zeros(m, n);
 
 % YOUR CODE GOES HERE.
 X_t = X';
+X2_t = X2';
 for i = 1 : m
     for j = 1 : n
-        K(i,j) = exp(norm(X2(i,j)-X_t(j,i)) / 2 * sigma^2);
+        K(i,j) = exp(-norm(X2_t(:,i)-X_t(:,j))^2 / (2 * sigma^2));
     end
 end
+
