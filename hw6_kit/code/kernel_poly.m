@@ -1,5 +1,4 @@
 function K = kernel_poly(X, X2, p)
-
 % Evaluates the Polynomial Kernel with specified degree p 
 %
 % Usage:
